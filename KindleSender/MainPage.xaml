@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="KindleSender.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KindleSender"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" >
+            <Button Click="Button_Click"  >选择文件并发送</Button>
+            <Button Click="ButtonConfig_Click" HorizontalAlignment="Right" >账户设置</Button>
+        </Grid>
+
+        <TextBox x:Name="txtPath" Grid.Row="1" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True">
+
+        </TextBox>
+        <ProgressRing Name="Loading"  Grid.Row="1"  Width="100"  Height="100"  IsActive="False">
+        </ProgressRing>
+
+    </Grid>
+</Page>
